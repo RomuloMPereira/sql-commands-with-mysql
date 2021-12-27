@@ -29,3 +29,8 @@ SELECT count(*) FROM salaries WHERE salary < 66961;
 SELECT count(*) FROM salaries WHERE salary > 66961 AND from_date > '1989-06-25';
 
 SELECT * FROM employees WHERE first_name > 'Sam';
+
+SELECT * FROM employees WHERE first_name LIKE 'E%';
+SELECT * FROM employees WHERE first_name LIKE 'Elv%' AND last_name LIKE '_e%';
+SELECT * FROM employees WHERE first_name LIKE 'Elv%' AND last_name NOT LIKE '%n';
+
