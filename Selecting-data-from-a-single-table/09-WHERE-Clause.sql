@@ -34,3 +34,9 @@ SELECT * FROM employees WHERE first_name LIKE 'E%';
 SELECT * FROM employees WHERE first_name LIKE 'Elv%' AND last_name LIKE '_e%';
 SELECT * FROM employees WHERE first_name LIKE 'Elv%' AND last_name NOT LIKE '%n';
 
+SELECT count(*) FROM salaries WHERE salary >= 66074 AND salary <= 71046;
+SELECT count(*) FROM salaries WHERE salary BETWEEN 66074 AND 71046;
+
+SELECT count(*) FROM employees WHERE birth_date BETWEEN '1954-01-01' AND '1956-01-01'; 
+SELECT count(*) FROM employees WHERE birth_date NOT BETWEEN '1954-01-01' AND '1956-01-01'; 
+
