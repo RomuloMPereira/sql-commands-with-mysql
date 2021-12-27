@@ -18,3 +18,6 @@ SELECT * FROM employees WHERE first_name IN ('Elvis', 'Sumant', 'Berni', 'Lillia
 SELECT count(*) FROM employees WHERE first_name IN ('Elvis', 'Sumant', 'Berni', 'Lillian');
 SELECT count(*) FROM employees WHERE first_name IN ('Elvis', 'Sumant', 'Berni', 'Lillian')
 	AND last_name NOT IN ('Redmiles', 'Haddadi', 'Demeyer', 'Restivo');
+    
+SELECT * FROM titles WHERE to_date IS NULL;
+SELECT * FROM titles WHERE to_date IS NOT NULL;
