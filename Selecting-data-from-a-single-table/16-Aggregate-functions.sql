@@ -45,3 +45,18 @@ FROM
     FROM
         salaries
     GROUP BY salary_year) AS sub_select;
+    
+SELECT 
+    DATE_FORMAT(from_date, '%Y') AS salary_date,
+    SUM(salary) AS total,
+    MAX(salary) AS max_salary,
+    MIN(salary) AS min_salary,
+    AVG(salary) AS avg_salary
+FROM
+    salaries
+WHERE
+    emp_no NOT IN (SELECT DISTINCT
+            emp_no
+        FROM
+            dept_manager)
+GROUP BY salary_date;
